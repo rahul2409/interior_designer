@@ -1,4 +1,3 @@
-	
 html,body{
 	width:100%;
 	height:100%;
@@ -90,11 +89,21 @@ body{
 }
 
 .nav-links .nav-items a{
-	color:#fff;
 	text-decoration:none;
 	cursor:default;
 	margin-right:15px;
 }
+
+.nav-links .nav-items a:link,
+.nav-links .nav-items a:visited{
+	color:#FFF;
+}
+
+.nav-links .nav-items a:hover,
+.nav-links .nav-items a:active{
+	color:#E2B539;
+}
+
 
 .nav-links .nav-items a:hover{
 	color:#E2B539;
@@ -370,18 +379,14 @@ body{
 
 .copy-right-section-container{
 	width:100%;
-/*	height:100px;*/
 	box-sizing: border-box;
 	background:#000;
-/*	padding:15px 0;*/
 }
 .copyright-section-container-inner{
 	width:78%;
 	height: 100px;
-/*	padding: 10px 20px;*/
 	box-sizing: border-box;
 	margin:0 auto;
-/*	background: red;*/
 }
 
 
@@ -594,31 +599,12 @@ body{
 	transition: all .3s ease;
 }
 
-/*
-.portfolio-list-item:link{
-	background:#000;
-	color:#FFF;
-}
 
-.portfolio-list-item:visited{
-	background:#000;
-	color:#FFF;
-}
-
-
-
-.portfolio-list-item:active{
-	background:#E2B539;
-	color:#000;
-}
-*/
 
 .portfolio-grid{
 	width:84%;
 	margin:45px auto;
 	overflow: hidden;
-/*	background: #FFF;*/
-/*	padding:45px 0;*/
 }
 
 .catalog-item{
@@ -626,24 +612,73 @@ body{
 	height:240px;
 	background:#FFF;
 	overflow:hidden;
-	border-radius:5px;
 	margin-right:1%;
 	margin-top:1%;
 	margin-bottom:1%;
+	position:relative;
 }
 
 .catalog-item img{
 	width:100%;
 	height:100%;
-	transition: all 0.5s ease;
+	transition: all 0.3s ease;
 }
 
-.catalog-item img:hover{
-	transform: scale(1.5);
-	filter:brightness(0.6);
+.catalog-item-text{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.8);
+	display: none;
+}
+
+
+.catalog-item:hover .catalog-item-text{
+	display:block;
 	cursor:pointer;
 }
 
+
+
+.catalog-item:hover img{
+	transform: scale(1.5);
+	cursor:pointer;
+}
+
+
+.catalog-item-text .catalog-item-text-header{
+	color:#fff;
+	font-weight: 300;
+	text-align:center;
+	margin:10px 0 50px;
+	padding:10px 0;
+/*	background:#000;*/
+	text-transform: uppercase;
+	
+}
+.catalog-item-text .catalog-item-text-content{
+	color:#fff;
+	font-weight: 300;
+	text-align:center;
+	line-height: 1.6em;
+	margin-bottom:40px;
+}
+
+
+.catalog-icon{
+	width:100%;
+/*	background:#000;*/
+	padding:10px 0;
+}
+
+.catalog-icon i{
+	float: right;
+	margin-right:20px;
+	font-size:18px;
+	color:#E2B539;
+}
 
 .portfolio-list li:hover{
 	background:#E2B539;
@@ -653,4 +688,137 @@ body{
  li.active{
 	background:#E2B539;
 	color:#FFF;
+}
+
+.information-section-outter{
+	width:84%;
+	padding:90px 0;
+	margin:0 auto;
+/*	background:#FFF;*/
+}
+.information-section-inner{
+	width:100%;
+	height:100%;
+}
+
+.information-section-one,.information-section-two{
+	width:49%;
+/*	height:500px;*/
+}
+
+.information-section-one,{
+	margin-right:1%;
+}
+
+
+.information-section-one label,.information-section-one input{
+	display: block;
+}
+
+
+.information-section-one-header{
+	color:#FFF;
+	font-weight: bold;
+	text-transform:uppercase;
+	margin-bottom:25px;
+}
+
+
+
+
+.information-section-one input{
+	margin-top:15px;
+	border:none;
+	border-bottom:solid 1px #E2B539;
+	padding:10px 0;
+	background: none;
+	width:60%;
+	font-size:13px;
+	margin-bottom:45px;
+	color:#FFF;
+}
+
+.information-section-one textarea{
+	background:none;
+	border-color:#E2B539;
+	margin-bottom:45px;
+	resize:none;
+	width:60%;
+	display: block;
+	padding: 10px 0;
+	color:#FFF;
+	font-size:13px; 
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+
+.information-section-one input:focus,
+.information-section-one input:hover,
+.information-section-one textarea:focus,
+.information-section-one textarea:hover{
+	outline:none;
+	color:#FFF;
+}
+
+
+
+
+
+
+.information-section-one input::placeholder,
+.information-section-one textarea::placeholder{
+	font-size: 13px;
+}
+.information-section-one label{
+	margin-bottom: 15px;
+	display:none;
+}
+
+
+.btn-submit{
+	color:#FFF;
+	padding:10px 20px;
+	text-decoration:none;
+	border:solid 1px #FFF;
+	text-transform: uppercase;
+	font-size:15px;
+	transition: all 0.3s ease;
+}
+
+
+.btn-submit:link{
+	color:#FFF;
+	background:none;
+}
+
+.btn-submit:visited{
+	color:#FFF;
+	background:none;
+}
+
+
+.btn-submit:hover{
+	background:#E2B539;
+	color:#000;
+	border-color:#E2B539;
+}
+
+
+.notfound-container{
+	width:84%;
+	padding:45px 0;
+	margin:0 auto;
+	text-align:center;
+}
+
+.notfound-title{
+	color:#FFF;
+	font-size:60px;
+	font-weight:300;
+}
+.notfound-container p{
+	color:#FFF;
+	font-weight:300;
+	font-size:15px;
 }

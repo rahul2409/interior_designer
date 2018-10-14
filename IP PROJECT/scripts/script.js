@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	new WOW().init();
 	$(".showcase").owlCarousel({
 		items:1,
 		autoplay:true,

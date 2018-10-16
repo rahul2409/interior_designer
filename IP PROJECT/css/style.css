@@ -776,7 +776,7 @@ body{
 }
 
 
-.btn-submit{
+.btn-submit,button[type="submit"]{
 	color:#FFF;
 	padding:10px 20px;
 	text-decoration:none;
@@ -784,6 +784,8 @@ body{
 	text-transform: uppercase;
 	font-size:15px;
 	transition: all 0.3s ease;
+	background:none;
+	cursor: pointer;
 }
 
 

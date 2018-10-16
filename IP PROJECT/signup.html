@@ -7,81 +7,6 @@
 	<link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/normalized.css">
 	<link rel="stylesheet" href="css/form.css">
-	<script type="text/javascript">
-		function validate(form)
-		{
-			fail = "";
-			fail += validateUserName(form.username.value);
-			fail += validateEmail(form.email.value);
-			fail += validatePassword(form.password.value,form.c_password);
-		}
-
-		function validateEmail(field)
-		{
-			var c1=0, c2=0;
-			for(i=0;i<field.length;i++)
-			{
-				if (field.charAt(i)=='@')
-					c1 += 1;
-				if (field.charAt(i)=='.')
-					c2 +=1;
-			}
-			if (field == "")
-			{
-				return "Please enter email";
-			}
-			else if (/[^'a-z','0-9','A-Z',@,_,-]/.test(field))
-			{
-				return "only 'a-z','0-9','A-Z',@,_,- are allowed";
-			}
-			else if (c1 > 1)
-			{
-				return "@ is allowed only once ";
-			}
-			else if (c2 < 3){
-				return "c2 is allowed not more than 3 times ";
-			}
-			else {
-				return "";
-			}
-		}
-
-		function validateUserName(field)
-		{
-			if (field == "")
-			{
-				return "no username was entered.";
-			}
-			else if (field.length < 5) {
-				return "username cannot be less than 5 characters .";
-			}
-			else if (/[^'a-z','A-Z','0-9',_]/.test(field)) {
-				return "can enter 'a-z','A-Z','0-9',_";
-			}
-			else {
-				return "";
-			}
-		}
-
-		function validatePassword(field1,field2){
-			if (field1 == "")
-			{
-				return "No password entered . ";
-			}
-			else if (field1.length < 6) {
-				return "Password too short . ";
-			}
-			else if (field1 == field2) {
-				return "Passwords entered do not match . ";
-			}
-			else if (!/['a-z']/.test(field) || !/['A-Z']/.test(field) || !/['0-9']/.test(field)) {
-				return "Password should have atleast one a-z,A-Z,0-9";
-			}
-			else {
-				return "";
-			}
-		}
-	</script>
 </head>
 <body>
 	<div class="sign-company-logo">
@@ -89,13 +14,26 @@
 	</div>
 	<div class="signup-form-container">
 		<h2>Sign Up</h2>
-		<form action="" onsubmit="return(validate(form));">
-			<input type="email" placeholder="Email" name="email" required>
-			<input type="text" placeholder="Username" name="username" required>
-			<input type="password" placeholder="Password" required>
-			<input type="password" placeholder="Confirm Password" required>
-			<a href="" name="login" class="login" id="signin">Sign Up</a>
+		<form action="">
+			<input type="email" placeholder="Email" name="email" id ="email" required>
+			<input type="text" placeholder="Username" id="name" name="username" required>
+			<input type="password" placeholder="Password" required id="password">
+			<input type="password" placeholder="Confirm Password" required id="confirm-password">
+			<a href="#" name="login" class="login" id="signin">Verify</a>
+			<button href="#" type="submit" class="login">Sign Up</button>
 		</form>
 	</div>
+	<div class="toaster">
+		<div class="icon-outter clearfix">
+			<div class="icon-close pull-right">
+				<i class="fa fa-times"></i>
+			</div>
+			<div class="message">
+				
+			</div>
+		</div>
+	</div>
+	<script src="scripts/jquery/jQuery-3.3.1.min.js"></script>
+	<script src="scripts/forms.js"></script>
 </body>
 </html>

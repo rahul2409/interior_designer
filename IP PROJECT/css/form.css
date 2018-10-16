@@ -9,9 +9,24 @@ body{
 	margin:15vh auto;
 }
 
+clearfix:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+
+pull-left{
+	float:left;
+}
+
+pull-right{
+	float:right;
+}
+
+
 .sign-company-logo{
 	width:17%;
-	margin:5vh auto;
+	margin:5vh auto ;
 }
 
 .company-logo img{
@@ -106,7 +121,7 @@ body{
 	margin-right:15px;
 	margin-left:15px;
 }
-.login{
+.login, button [type="submit"]{
 	text-decoration:none;
 	margin-left:20px;
 	margin-right:20px;
@@ -114,6 +129,8 @@ body{
 	padding:10px 20px;
 	border:solid 1px #FFF;
 	transition:all 0.3s ease;
+	background: none;
+	color:#FFF;
 }
 .login:link,
 .login:visited{
@@ -144,4 +161,35 @@ body{
 	background:#FFF;
 	color:#000;
 	cursor:pointer;
+}
+
+
+.toaster{
+	position:fixed;
+	right:15px;
+	top:60px;
+	text-align: center;
+	width:400px;
+/*	height:400px;*/
+	padding:10px 20px;
+	display: none;
+	color:#FFF;
+}
+
+.haserror{
+	background:#CA5E59;
+}
+
+.passed{
+	background:#51A351;
+}
+
+.toaster .icon-outter i{
+	color:#000;
+	cursor: pointer;
+}
+
+.error{
+	width:100%;
+	height:100%;
 }

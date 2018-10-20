@@ -49,7 +49,7 @@ body{
 .nav-left{
 	width:21%;
 /*	background:black;*/
-	
+
 }
 
 .nav-left img{
@@ -278,7 +278,7 @@ body{
 	text-align: center;
 	display:table-cell;
 	vertical-align: middle;
-	
+
 }
 
 .contact-nav .contact-link{
@@ -334,7 +334,7 @@ body{
 	padding:10px;
 	box-sizing: border-box;
 /*	float: left;*/
-} 
+}
 
 .footer-list{
 	list-style:none;
@@ -466,8 +466,8 @@ body{
 }
 
 .about-section-title{
-	margin:45px 0; 
-	box-sizing:border-box; 
+	margin:45px 0;
+	box-sizing:border-box;
 }
 
 .about-section-title h2{
@@ -534,7 +534,7 @@ body{
 .testimonial-container{
 	width:85%;
 	margin:0 auto;
-	
+
 }
 .testimonials .testimonial img{
 	width:100px;
@@ -656,7 +656,7 @@ body{
 	padding:10px 0;
 /*	background:#000;*/
 	text-transform: uppercase;
-	
+
 }
 .catalog-item-text .catalog-item-text-content{
 	color:#fff;
@@ -747,7 +747,7 @@ body{
 	display: block;
 	padding: 10px 0;
 	color:#FFF;
-	font-size:13px; 
+	font-size:13px;
 	border-top: none;
 	border-right: none;
 	border-left: none;

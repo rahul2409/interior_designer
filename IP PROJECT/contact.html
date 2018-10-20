@@ -3,20 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Interior Design | Contact Us</title>
-	
+
 	<link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.min.css">
-	
+
 	<link rel="stylesheet" href="css/normalized.css">
-	
+
 	<link rel="stylesheet" href="vendors/animate/animate.css">
-	
+
 	<link rel="stylesheet" href="vendors/owl/assets/owl.theme.int.min.css">
-	
+
 	<link rel="stylesheet" href="vendors/owl/assets/owl.carousel.min.css">
-	
-	
+
+
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-	
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -52,22 +52,22 @@
 <!-----PROJECT-SECTION-BACKGROUND-AREA-ENDS----->
 <div class="about-section-title">
 	<h2>Contact Us</h2>
-	<hr class="underline">		
+	<hr class="underline">
 </div>
 <!-----CONTACT US FORM STARTS HERE------>
 	<div class="information-section-outter">
 		<div class="information-section-inner clearfix">
 			<div class="information-section-one pull-left">
 			<h3 class="information-section-one-header">Subscribe To Our Services</h3>
-				<form action="">
-					<label for="first_name" name="first_name" required>First Name</label>
+				<form action="contact.php" method="post">
+					<label for="first_name">First Name</label>
 					<input type="text" placeholder="Your Name" name="first_name" required>
-					<label for="last_name" name="last_name" required>Last Name</label>
-					<input type="text" placeholder="Last Name" required>
-					<label for="email" name="email" required>Email</label>
-					<input type="email" placeholder="Your Email" required>
-					<textarea name="" id="" placeholder="Your Feedback"></textarea>
-					<button type = "submit" href="" name="submit" class="btn-submit" id="subscribtion-submit">Submit  <i class="fa fa-paper-plane"></i></button>
+					<label for="last_name" required>Last Name</label>
+					<input type="text" placeholder="Last Name" name="last_name" required>
+					<label for="email" required>Email</label>
+					<input type="email" placeholder="Your Email" name="email" required>
+					<textarea placeholder="Your Feedback" name="text_area"></textarea>
+					<button type = "submit" href="contact.php" name="submit" class="btn-submit" id="subscribtion-submit">Submit  <i class="fa fa-paper-plane"></i></button>
 				</form>
 			</div>
 			<div class="information-section-two pull-left" id="company-location-map"></div>

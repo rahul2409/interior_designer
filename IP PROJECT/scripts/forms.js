@@ -1,23 +1,23 @@
 $(document).ready(function(){
-	
+
 	$emailRegex = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-	
+
 	$userNameRegex = /[^'a-z','A-Z','0-9',_]/;
-	
+
 	$passwordRegexForLowerCaseAlphabets =/['a-z']/;
 	$passwordRegexForUpperCaseAlphabets =/['A-Z']/
 	$passwordRegexForNumbers = /\d/;
 	$passwordRegexForSpecialCharacters = /[@_.]/
-	
-	
+
+
 	$emailError = "";
 	$passwordError = "";
 	$passwordNotMatchingError = "";
 	$passwordShortError = "";
 	$allNullError = "";
-	$summaryOfErrors = ""; 
-	
-	
+	$summaryOfErrors = "";
+
+
 	$('#signin').click(function(){
 		window.refresh;
 		$email = $("#email").val();
@@ -29,17 +29,17 @@ $(document).ready(function(){
 			$allNullError = 'All fields are required';
 			$summaryOfErrors = $allNullError;
 		}
-		
+
 		else{
 			if($emailRegex.test($email) != true){
-			
+
 			$emailError = "Enter valid email only, ";
 			$summaryOfErrors += $emailError;
 			}
-		
+
 			if(!($passwordRegexForLowerCaseAlphabets.test($password) && ($passwordRegexForUpperCaseAlphabets.test($password))&& ($passwordRegexForNumbers.test($password)) && ($passwordRegexForSpecialCharacters.test($password)))){
 				$passwordError = "Password must have atleast one a-z,A-Z,0-9 and a special character like @ or _, ";
-				$summaryOfErrors += $passwordError ; 
+				$summaryOfErrors += $passwordError ;
 
 			}
 
@@ -52,11 +52,11 @@ $(document).ready(function(){
 
 			if($password != $confirm || $confirm == ""){
 				$passwordNotMatchingError = "Password Dont Match cant sign up";
-				$summaryOfErrors += $passwordNotMatchingError; 
-			}	
+				$summaryOfErrors += $passwordNotMatchingError;
+			}
 		}
-		
-		
+
+
 		if($summaryOfErrors == ""){
 			$(".message").html("Ready to Sign Up");
 			$(".toaster").css("display","block").addClass("passed");
@@ -65,13 +65,16 @@ $(document).ready(function(){
 			$(".message").html($summaryOfErrors);
 			$(".toaster").css("display","block").addClass("haserror");
 			$summaryOfErrors = "";
-			
+
 		}
-	
+
 	});
-	
+
+
+
 	$(".toaster .icon-outter ").click(function(){
 		$(".toaster").css('display','none');
 	});
-	
+
+
 });

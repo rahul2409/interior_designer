@@ -1,3 +1,8 @@
+<?php
+	if(isset($_GET['error'])){
+		echo "<script>alert('".$_GET['error']."')</script>";
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +25,7 @@
 			<input type="password" name="password" placeholder="Password" required id="password">
 			<input type="password" name="c_password" placeholder="Confirm Password" required id="confirm-password" >
 			<a href="#" name="login" class="login" id="signin">Verify</a>
-			<button href="signup.php" type="submit" class="login">Sign Up</button>
+			<button href="signup.php" type="submit" id = "submit" class="login">Sign Up</button>
 		</form>
 	</div>
 	<div class="toaster">

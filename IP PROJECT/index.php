@@ -1,22 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Interior Design | Home</title>
-	
+
 	<link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.min.css">
-	
+
 	<link rel="stylesheet" href="css/normalized.css">
-	
+
 	<link rel="stylesheet" href="vendors/animate/animate.css">
-	
+
 	<link rel="stylesheet" href="vendors/owl/assets/owl.theme.int.min.css">
-	
+
 	<link rel="stylesheet" href="vendors/owl/assets/owl.carousel.min.css">
-	
-	
+
+
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-	
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,14 +34,25 @@
 						<li class="nav-items"><a href="about.html"> <i class="fa fa-users"></i> ABOUT US</a></li>
 						<li class="nav-items"><a href="projects.html"> <i class="fa fa-th"></i> PROJECTS</a></li>
 						<li class="nav-items"><a href="contact.html"> <i class="fa fa-envelope-square"></i> CONTACT US</a></li>
-						<li class="nav-items"><a href="signup.html" target="_blank"><i class="fa fa-user-plus"></i> SIGN UP</a></li>
-						<li class="nav-items"><a href="login.html" target="_blank"> <i class="fa fa-sign-in"></i> LOGIN IN</a></li>
+						<!-- session will display it till here -->
+						<li class="nav-items" id="signup"><a href="signup.html" target="_blank"><i class="fa fa-user-plus"></i> SIGN UP</a></li>
+						<li class="nav-items" id="loggedin"><a href="login.html" target="_blank"> <i class="fa fa-sign-in"></i> LOGIN IN</a></li>
+						<li class= "nav-items" id="after_login"></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 <!----- NAV BAR ENDS ---->
+<?php
+	if(isset($_GET['username'])){
+		session_start();
+		$name = $_SESSION['username'];
+		echo "<script>document.getElementById('signup').style.display = 'none';</script>";
+		echo "<script>document.getElementById('loggedin').style.display = 'none';</script>";
+		echo "<script>document.getElementById('after_login').innerHTML = 'Welcome, ".$name."';</script>";
+	}
+ ?>
 <!----SHOWCASE SECTION ---->
 	<div class="showcase owl-carousel">
 		<div class="showcase-slide-1">
@@ -119,7 +131,7 @@
 			</div>
 		</div>
 		<!----SERVICE SECTION DESCRIPTION ENDS----->
-	</div>	
+	</div>
 <!------SERVICE SECTION ENDS----->
 <!-----CONTACT US BUTTON AREA----->
 	<div class="contact-us">

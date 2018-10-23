@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,38 +20,10 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!------NAV BAR STARTS ----->
-	<div class="nav-container">
-		<div class="nav-wrapper clearfix">
-			<div class="nav-left pull-left">
-				<img src="vendors/images/logo.png" alt="">
-			</div>
-			<div class="nav-right pull-right">
-				<div class="nav-links-wrapper">
-					<ul class="nav-links">
-						<li class="nav-items"><a href="index.html"> <i class="fa fa-home"></i> HOME</a></li>
-						<li class="nav-items"><a href="about.html"> <i class="fa fa-users"></i> ABOUT US</a></li>
-						<li class="nav-items"><a href="projects.html"> <i class="fa fa-th"></i> PROJECTS</a></li>
-						<li class="nav-items"><a href="contact.html"> <i class="fa fa-envelope-square"></i> CONTACT US</a></li>
-						<!-- session will display it till here -->
-						<li class="nav-items" id="signup"><a href="signup.html" target="_blank"><i class="fa fa-user-plus"></i> SIGN UP</a></li>
-						<li class="nav-items" id="loggedin"><a href="login.html" target="_blank"> <i class="fa fa-sign-in"></i> LOGIN IN</a></li>
-						<li class= "nav-items" id="after_login"></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-<!----- NAV BAR ENDS ---->
+
 <?php
-	if(isset($_GET['username'])){
-		session_start();
-		$name = $_SESSION['username'];
-		echo "<script>document.getElementById('signup').style.display = 'none';</script>";
-		echo "<script>document.getElementById('loggedin').style.display = 'none';</script>";
-		echo "<script>document.getElementById('after_login').innerHTML = 'Welcome, ".$name."';</script>";
-	}
- ?>
+	include('nav.php');
+	?>
 <!----SHOWCASE SECTION ---->
 	<div class="showcase owl-carousel">
 		<div class="showcase-slide-1">
